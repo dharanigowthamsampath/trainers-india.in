@@ -78,7 +78,6 @@ const NavigationMenu = (props: Props) => {
         >
           Account
         </Link>
-        <button>Logout</button>
       </div>
 
       {/* Mobile Menu */}
