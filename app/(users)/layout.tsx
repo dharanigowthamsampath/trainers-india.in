@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <div className="w-full h-full flex justify-center">
           <div className="w-[1280px]">
-            <div className="flex flex-col w-full justify-center">
+            <div className="flex flex-col w-full h-full">
               <NaviagtionMenu />
               {children}
             </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-const LearnPage = (props: Props) => {
+const Account = (props: Props) => {
   return (
     <div className="h-full w-full flex justify-center items-center">
       <ComingSoon />
@@ -11,4 +11,4 @@ const LearnPage = (props: Props) => {
   );
 };
 
-export default LearnPage;
+export default Account;

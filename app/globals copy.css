@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+:root {
+  --linkedin-blue: #0a66c2;
+  --linkedin-light-blue: #e7f3ff;
+  --linkedin-black: #000000;
+  --linkedin-dark-gray: #333333;
+  --linkedin-medium-gray: #86888a;
+  --linkedin-light-gray: #f3f2ef;
+  --linkedin-white: #ffffff;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--linkedin-light-gray);
+  color: var(--linkedin-black);
+  line-height: 1.5;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--linkedin-dark-gray);
+}
+
+a {
+  color: var(--linkedin-blue);
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 24px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--linkedin-white);
+  background-color: var(--linkedin-blue);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004182;
+}
+
+.btn-secondary {
+  color: var(--linkedin-blue);
+  background-color: var(--linkedin-white);
+  border: 1px solid var(--linkedin-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--linkedin-light-blue);
+  border-color: #004182;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--linkedin-medium-gray);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: var(--linkedin-blue);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--linkedin-blue);
+}
+
+/* Cards */
+.card {
+  background-color: var(--linkedin-white);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+/* Navigation */
+.nav {
+  background-color: var(--linkedin-white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0 16px;
+}
+
+.nav-link {
+  color: var(--linkedin-medium-gray);
+  font-weight: 400;
+  padding: 16px;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: var(--linkedin-black);
+}
+
+/* Utilities */
+.text-muted {
+  color: var(--linkedin-medium-gray);
+}
+
+.bg-light {
+  background-color: var(--linkedin-light-gray);
+}
