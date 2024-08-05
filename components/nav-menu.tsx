@@ -170,7 +170,7 @@ const NavigationMenu = (props: Props) => {
             >
               Content
             </Link>
-            <div className="px-4 py-2 cursor-pointer text-red-500 text-sm hover:bg-red-500 hover:text-white">
+            <div className="px-4 py-2 cursor-pointer text-red-500 hover:bg-red-500 hover:text-white">
               <SignOutButton>Logout</SignOutButton>
             </div>
             {/* <Link
