@@ -124,7 +124,7 @@ const NavigationMenu = (props: Props) => {
           <div className="flex flex-col">
             <Link
               href="/dashboard"
-              className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
+              className={`px-4 py-2 cursor-pointer ${
                 isActive("/dashboard")
                   ? "bg-blue-800 text-white"
                   : "hover:bg-blue-800 hover:text-white"
