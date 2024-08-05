@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SignIn, SignOutButton, SignedOut, UserButton } from "@clerk/nextjs";
 
 type Props = {};
 
@@ -72,12 +73,16 @@ const NavigationMenu = (props: Props) => {
             </div>
           </div>
         </div>
-        <Link
+        <div className="px-4 py-2 flex items-center cursor-pointer text-red-500 text-sm">
+          <SignOutButton />
+        </div>
+
+        {/* <Link
           href="/account"
           className="px-4 py-2 flex items-center cursor-pointer"
         >
           Account
-        </Link>
+        </Link> */}
       </div>
 
       {/* Mobile Menu */}
@@ -162,7 +167,10 @@ const NavigationMenu = (props: Props) => {
             >
               Content
             </Link>
-            <Link
+            <div className="px-4 py-2 cursor-pointer text-red-500 text-sm">
+              <SignOutButton />
+            </div>
+            {/* <Link
               href="/account"
               className={`px-4 py-2 cursor-pointer ${
                 isActive("/account")
@@ -171,7 +179,7 @@ const NavigationMenu = (props: Props) => {
               }`}
             >
               Account
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>
