@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SignOutButton } from "@clerk/nextjs";
+import { SignOutButton, UserButton } from "@clerk/nextjs";
 
 type Props = {};
 
-const NavigationMenu = async (props: Props) => {
+const NavigationMenu = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
