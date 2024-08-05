@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SignIn, SignOutButton, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignOutButton } from "@clerk/nextjs";
 
 type Props = {};
 
@@ -77,7 +77,7 @@ const NavigationMenu = (props: Props) => {
           className="px-4 py-2 flex items-center cursor-pointer text-red-500 hover:bg-red-500
           hover:text-white"
         >
-          <SignOutButton>Logout</SignOutButton>
+          <SignOutButton redirectUrl="/">Logout</SignOutButton>
         </div>
 
         {/* <Link
@@ -170,8 +170,8 @@ const NavigationMenu = (props: Props) => {
             >
               Content
             </Link>
-            <div className="px-4 py-2 cursor-pointer text-red-500 hover:bg-red-500 hover:text-white">
-              <SignOutButton>Logout</SignOutButton>
+            <div className="px-4 py-2 mb-2 cursor-pointer text-red-500 hover:bg-red-500 hover:text-white">
+              <SignOutButton redirectUrl="/">Logout</SignOutButton>
             </div>
             {/* <Link
               href="/account"
