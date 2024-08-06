@@ -27,3 +27,8 @@ body {
   color: var(--linkedin-black);
   line-height: 1.5;
 }
+
+a {
+  color: var(--linkedin-blue);
+  text-decoration: none;
+}
