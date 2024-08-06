@@ -9,10 +9,10 @@ const UserInfo = async () => {
   const user = await checkUser();
   return (
     <>
-      <div>{user?.emailId}</div>
-      <div>{user?.clerkUserId}</div>
-      <div>{user?.id}</div>
-      <div>{user?.name}</div>
+      <div>Emailid = {user?.emailId}</div>
+      <div>ClerkUserId = {user?.clerkUserId}</div>
+      <div>UserId = {user?.id}</div>
+      <div>UserName = {user?.name}</div>
     </>
   );
 };
