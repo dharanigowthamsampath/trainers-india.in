@@ -196,16 +196,21 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { SignOutButton, useClerk } from "@clerk/nextjs";
+import { useClerk } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUsers";
 
 type Props = {};
 
 const NavigationMenu = () => {
-  checkUser();
+  useEffect(() => {
+    const fetchUser = async () => {
+      const userData = await checkUser();
+    };
+    fetchUser();
+  }, []);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
