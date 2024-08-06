@@ -18,6 +18,7 @@ export default function RootLayout({
           <div className="w-[1280px]">
             <div className="flex flex-col w-full h-full">
               <NaviagtionMenu />
+
               {children}
             </div>
           </div>

@@ -200,10 +200,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { SignOutButton, useClerk } from "@clerk/nextjs";
+import { checkUser } from "@/lib/checkUsers";
 
 type Props = {};
 
-const NavigationMenu = (props: Props) => {
+const NavigationMenu = () => {
+  checkUser();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const pathname = usePathname();
