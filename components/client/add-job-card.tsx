@@ -1,7 +1,5 @@
-"use client";
-
 import { AddJobPost } from "@/server/AddJobPost";
-import React, { useState, useTransition } from "react";
+import React, { useState, useTransition, useEffect } from "react";
 
 const AddJobCard = () => {
   const [content, setContent] = useState("");
@@ -10,6 +8,16 @@ const AddJobCard = () => {
     message: string;
   }>({ type: "idle", message: "" });
   const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    if (status.type !== "idle") {
+      const timer = setTimeout(() => {
+        setStatus({ type: "idle", message: "" });
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleSubmit = async (formData: FormData) => {
     startTransition(async () => {
