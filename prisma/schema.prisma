@@ -21,14 +21,13 @@ model User {
   imageUrl    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  posts       Post[]
+  jobs        Job[]
 }
 
-model Post {
+model Job {
   id        String   @id @default(cuid())
   content   String
-  published Boolean  @default(false)
   createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [clerkUserId])
   userId    String
 }

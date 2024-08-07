@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +6,7 @@ export default function Home() {
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-5">
         <div className="px-4 py-2 bg-blue-600 text-white w-40 flex justify-center rounded-lg">
           <Link
-            className="w-full h-full flex items-center justify-center text-base"
+            className="w-full h-full flex items-center justify-center text-base text-white"
             href={"/jobs"}
           >
             Add Job
@@ -15,7 +14,7 @@ export default function Home() {
         </div>
         <div className="px-4 py-2 bg-blue-600 text-white w-40 flex justify-center rounded-lg">
           <Link
-            className="w-full h-full flex items-center justify-center text-base"
+            className="w-full h-full flex items-center justify-center text-base text-white"
             href={"/jobs"}
           >
             View Job
