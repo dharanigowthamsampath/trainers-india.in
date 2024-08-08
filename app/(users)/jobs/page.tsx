@@ -1,6 +1,7 @@
 "use client";
 import AddJobCard from "@/components/client/add-job-card";
 import SidebarMenu from "@/components/client/sidebar";
+import JobListCard from "@/components/ui/job-list-card";
 import { getJobs } from "@/server/GetJobPosts";
 import React, { useState, useEffect } from "react";
 
@@ -27,8 +28,7 @@ const JobList = ({
   jobs: Job[];
   onSelectJob: (job: Job) => void;
 }) => (
-  <div className="bg-white w-full md:w-1/3 p-2">
-    <h2 className="text-xl font-bold mb-4">Job List</h2>
+  <div className="bg-white w-full md:w-1/3">
     <ul>
       {jobs.map((job) => (
         <li
@@ -36,10 +36,10 @@ const JobList = ({
           className="mb-2 cursor-pointer hover:bg-gray-100"
           onClick={() => onSelectJob(job)}
         >
-          <h3 className="font-semibold">{job.content.substring(0, 50)}...</h3>
-          <p className="text-sm text-gray-500">
-            Posted by: {job.user.name || "Anonymous"}
-          </p>
+          <JobListCard
+            username={job.user.name || "Anonymous"}
+            title={`${job.content.substring(0, 30)}...`}
+          />
         </li>
       ))}
     </ul>
@@ -48,7 +48,6 @@ const JobList = ({
 
 const JobDescription = ({ job }: { job: Job | null }) => (
   <div className="hidden md:block bg-white w-full md:w-2/3 p-2">
-    <h2 className="text-xl font-bold mb-4">Job Description</h2>
     {job ? (
       <>
         <p>{job.content}</p>
