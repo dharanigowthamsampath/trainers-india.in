@@ -7,7 +7,7 @@ import { z } from "zod";
 
 // Define a schema for job post validation
 const jobPostSchema = z.object({
-  content: z.string().min(10).max(1000),
+  content: z.string().min(10).max(10000),
 });
 
 export async function AddJobPost(formData: FormData) {
