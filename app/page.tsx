@@ -7,7 +7,7 @@ export default function Home() {
         <div className="px-4 py-2 bg-blue-600 text-white w-40 flex justify-center rounded-lg">
           <Link
             className="w-full h-full flex items-center justify-center text-base text-white"
-            href={"/jobs"}
+            href={"/job"}
           >
             Add Job
           </Link>
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="px-4 py-2 bg-blue-600 text-white w-40 flex justify-center rounded-lg">
           <Link
             className="w-full h-full flex items-center justify-center text-base text-white"
-            href={"/jobs"}
+            href={"/job"}
           >
             View Job
           </Link>
