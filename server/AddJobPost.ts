@@ -7,7 +7,7 @@ import { z } from "zod";
 
 // Define a schema for job post validation
 const jobPostSchema = z.object({
-  title: z.string().min(10).max(30),
+  title: z.string().min(10).max(100),
   content: z.string().min(10).max(10000),
 });
 
