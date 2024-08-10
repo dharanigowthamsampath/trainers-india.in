@@ -7,6 +7,7 @@ import { z } from "zod";
 
 // Define a schema for job post validation
 const jobPostSchema = z.object({
+  title: z.string().min(10).max(30),
   content: z.string().min(10).max(10000),
 });
 
@@ -17,15 +18,20 @@ export async function AddJobPost(formData: FormData) {
     throw new Error("User not authenticated");
   }
 
+  const jobPostTitle = formData.get("title");
   const jobPostDescription = formData.get("content");
 
   try {
     // Validate the form data
-    const validatedData = jobPostSchema.parse({ content: jobPostDescription });
+    const validatedData = jobPostSchema.parse({
+      content: jobPostDescription,
+      title: jobPostTitle,
+    });
 
     // If validation passes, create the job post
     await prisma.job.create({
       data: {
+        title: validatedData.title,
         content: validatedData.content,
         userId: clerkUser.id,
       },

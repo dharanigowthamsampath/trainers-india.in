@@ -2,6 +2,7 @@ import { AddJobPost } from "@/server/AddJobPost";
 import React, { useState, useTransition, useEffect } from "react";
 
 const AddJobCard = () => {
+  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState<{
     type: "idle" | "success" | "error";
@@ -28,6 +29,7 @@ const AddJobCard = () => {
           message: response.message || "Something went wrong",
         });
         setContent(""); // Reset the editor
+        setTitle("");
       } else if (response.errors) {
         setStatus({
           type: "error",
@@ -56,6 +58,13 @@ const AddJobCard = () => {
             </button>
           </div>
         </div>
+        <input
+          name="title"
+          placeholder="Enter the Job title Here..."
+          className="border text-sm p-2 w-full"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <textarea
           name="content"
           className="border text-sm p-2 h-96 w-full"
