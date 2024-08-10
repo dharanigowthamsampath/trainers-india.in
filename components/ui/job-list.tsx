@@ -26,7 +26,7 @@ const JobList = ({
         {jobs.map((job) => (
           <li
             key={job.id}
-            className="mb-2 cursor-pointer"
+            className="mb-0.5 cursor-pointer"
             onClick={() => onSelectJob(job)}
           >
             <JobListCard
