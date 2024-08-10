@@ -9,6 +9,7 @@ type Props = {};
 
 type Job = {
   id: string;
+  title: string;
   content: string;
   createdAt: Date;
   userId: string;

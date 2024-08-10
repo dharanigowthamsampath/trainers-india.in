@@ -79,7 +79,7 @@ const SidebarMenu: React.FC<Props> = ({
           )}
         </div>
       ) : (
-        <div className={`flex w-full ${className}`}>
+        <div className={`flex w-96 ${className}`}>
           {tabs.map((tab) => (
             <div
               key={tab.id}

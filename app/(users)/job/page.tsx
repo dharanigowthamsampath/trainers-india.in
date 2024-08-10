@@ -28,8 +28,8 @@ const JobPage = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-50px)] flex flex-col">
-      <div className="w-full bg-white mb-2">
+    <div className="w-full h-[calc(100vh-50px)] flex flex-col mt-1">
+      <div className="w-full bg-white mb-1">
         <SidebarMenu
           tabs={jobTabs}
           activeTab={activeTab}

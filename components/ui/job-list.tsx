@@ -3,6 +3,7 @@ import JobListCard from "./job-list-card";
 // types.ts
 export type Job = {
   id: string;
+  title: string;
   content: string;
   createdAt: Date;
   userId: string; // Include this
@@ -31,7 +32,7 @@ const JobList = ({
           >
             <JobListCard
               username={job.user.name || "Anonymous"}
-              title={`${job.content.substring(0, 30)}...`}
+              title={`${job.title.substring(0, 30)}...`}
               isSelected={selectedJob?.id === job.id}
             />
           </li>
