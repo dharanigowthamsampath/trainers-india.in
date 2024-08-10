@@ -1,5 +1,5 @@
 "use client";
-
+import AddJobCard from "@/components/client/add-job-card";
 import ExploreMenuComponent from "@/components/client/explore-menu";
 import SidebarMenu from "@/components/client/sidebar";
 import React, { useState } from "react";
@@ -14,13 +14,12 @@ const jobTabs = [
 
 const JobPage = (props: Props) => {
   const [activeTab, setActiveTab] = useState(jobTabs[0].id);
-
   const renderContent = () => {
     switch (activeTab) {
       case "explore":
         return <ExploreMenuComponent />;
       case "add":
-        return <div>Add Menu</div>;
+        return <AddJobCard />;
       case "saved":
         return <div>Saved Jobs Menu</div>;
       default:
@@ -29,18 +28,15 @@ const JobPage = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-50px)] flex pt-2">
-      <div className="w-full h-full flex space-x-1">
-        <div className="w-[250px] bg-white overflow-y-auto">
-          {/* Sidebar content */}
-          <SidebarMenu
-            tabs={jobTabs}
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-        </div>
-        <div className="w-full h-full flex">{renderContent()}</div>
+    <div className="w-full h-[calc(100vh-50px)] flex flex-col">
+      <div className="w-full bg-white mb-2">
+        <SidebarMenu
+          tabs={jobTabs}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
       </div>
+      <div className="w-full flex-grow overflow-hidden">{renderContent()}</div>
     </div>
   );
 };

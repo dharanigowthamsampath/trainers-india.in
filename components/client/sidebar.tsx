@@ -24,12 +24,10 @@ const SidebarMenu: React.FC<Props> = ({
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust this breakpoint as needed
+      setIsMobile(window.innerWidth < 768);
     };
-
     checkIfMobile();
     window.addEventListener("resize", checkIfMobile);
-
     return () => {
       window.removeEventListener("resize", checkIfMobile);
     };
@@ -81,11 +79,11 @@ const SidebarMenu: React.FC<Props> = ({
           )}
         </div>
       ) : (
-        <div className={`flex-col w-full min-h-[500px] ${className}`}>
+        <div className={`flex w-full ${className}`}>
           {tabs.map((tab) => (
             <div
               key={tab.id}
-              className={`p-2 cursor-pointer ${
+              className={`p-2 cursor-pointer flex-grow text-center ${
                 activeTab === tab.id
                   ? "bg-blue-800 text-white"
                   : "hover:bg-blue-800 hover:text-white"
