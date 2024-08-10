@@ -32,3 +32,8 @@ a {
   color: var(--linkedin-blue);
   text-decoration: none;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
