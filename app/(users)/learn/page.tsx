@@ -23,7 +23,7 @@ const LearnPage = (props: Props) => {
       {/* <Suspense fallback={<Loader size="medium" color="gray-900" />}>
         <UserInfo />
       </Suspense> */}
-      <Loader size="medium" color="gray-900" />
+      <Loader size="medium" />
       <ComingSoon />
     </div>
   );
