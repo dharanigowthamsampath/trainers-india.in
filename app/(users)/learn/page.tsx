@@ -20,7 +20,7 @@ type Props = {};
 const LearnPage = (props: Props) => {
   return (
     <div className="h-full w-full flex flex-col justify-center items-center">
-      {/* <Suspense fallback={<Loader size="medium" color="gray-900" />}>
+      {/* <Suspense fallback={<Loader size="medium" />}>
         <UserInfo />
       </Suspense> */}
       <Loader size="medium" />

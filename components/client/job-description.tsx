@@ -10,19 +10,15 @@ type Job = {
 };
 
 const JobDescription = ({ job }: { job: Job | null }) => {
+  if (!job) return null;
+
   return (
-    <div className="hidden md:block bg-white w-full md:w-2/3 p-2">
-      {job ? (
-        <>
-          <p>{job.content}</p>
-          <p className="mt-4 text-sm text-gray-500">
-            Posted by: {job.user.name || "Anonymous"} on{" "}
-            {new Date(job.createdAt).toLocaleDateString()}
-          </p>
-        </>
-      ) : (
-        <p>Select a job to view its description.</p>
-      )}
+    <div className="bg-white w-full p-2">
+      <p>{job.content}</p>
+      <p className="mt-4 text-sm text-gray-500">
+        Posted by: {job.user.name || "Anonymous"} on{" "}
+        {new Date(job.createdAt).toLocaleDateString()}
+      </p>
     </div>
   );
 };
