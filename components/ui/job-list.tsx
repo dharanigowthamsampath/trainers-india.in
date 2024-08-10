@@ -35,7 +35,7 @@ const JobList = ({
             />
           </div>
           {isMobile && selectedJob?.id === job.id && (
-            <div className="bg-white p-2">
+            <div className="bg-white p-2 border">
               <JobDescription job={job} />
             </div>
           )}
