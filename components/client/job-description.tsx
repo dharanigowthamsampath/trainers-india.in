@@ -1,14 +1,6 @@
 import React from "react";
 import { purify } from "@/utils/purify";
-
-interface Job {
-  id: string;
-  content: string;
-  createdAt: Date;
-  user: {
-    name: string | null;
-  };
-}
+import { Job } from "./explore-menu";
 
 interface JobDescriptionProps {
   job: Job | null;
