@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import JobDescription from "../client/job-description";
 import JobListCard from "./job-list-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -23,6 +23,24 @@ const JobList: React.FC<JobListProps> = ({
   totalPages,
   onPageChange,
 }) => {
+  const [contentHeights, setContentHeights] = useState<{
+    [key: string]: number;
+  }>({});
+  const contentRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  useEffect(() => {
+    if (isMobile) {
+      jobs.forEach((job) => {
+        if (contentRefs.current[job.id]) {
+          setContentHeights((prev) => ({
+            ...prev,
+            [job.id]: contentRefs.current[job.id]?.scrollHeight || 0,
+          }));
+        }
+      });
+    }
+  }, [jobs, isMobile]);
+
   return (
     <div className="h-full flex flex-col relative">
       <ul className="flex-grow overflow-y-auto scrollbar-hide scroll-m-0 pb-16">
@@ -35,9 +53,21 @@ const JobList: React.FC<JobListProps> = ({
                 isSelected={selectedJob?.id === job.id}
               />
             </div>
-            {isMobile && selectedJob?.id === job.id && (
-              <div className="bg-white p-2 border">
-                <JobDescription job={job} />
+            {isMobile && (
+              <div
+                className="bg-white overflow-hidden transition-all duration-300 ease-in-out border-b"
+                style={{
+                  maxHeight:
+                    selectedJob?.id === job.id ? contentHeights[job.id] : 0,
+                }}
+              >
+                <div
+                  ref={(el) => {
+                    if (el) contentRefs.current[job.id] = el;
+                  }}
+                >
+                  <JobDescription job={job} />
+                </div>
               </div>
             )}
           </li>
