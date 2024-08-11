@@ -81,8 +81,8 @@ const JobList = ({
   onPageChange: (page: number) => void;
 }) => {
   return (
-    <div className="h-full flex flex-col">
-      <ul className="flex-grow overflow-y-auto scrollbar-hide scroll-m-0">
+    <div className="h-full flex flex-col relative">
+      <ul className="flex-grow overflow-y-auto scrollbar-hide scroll-m-0 pb-16">
         {jobs.map((job) => (
           <li key={job.id} className="mb-0.5">
             <div onClick={() => onSelectJob(job)}>
@@ -100,7 +100,7 @@ const JobList = ({
           </li>
         ))}
       </ul>
-      <div className="flex justify-evenly items-center p-2">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-around items-center p-2 bg-white border-t">
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -116,7 +116,7 @@ const JobList = ({
           disabled={currentPage === totalPages}
           className="px-2 py-1 bg-blue-800 text-white rounded disabled:opacity-50 ml-2"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="w-5 h-5" />
         </button>
       </div>
     </div>
