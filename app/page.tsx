@@ -12,7 +12,12 @@ export default function Home() {
         </div>
 
         <div className="pb-5 flex justify-center">
-          <Link href={"/job"} className="px-10 border py-2 border-blue-600">
+          <Link
+            href={
+              "https://accounts.trainers-india.in/sign-in?redirect_url=https://trainers-india.in/dashboard"
+            }
+            className="px-10 border py-2 border-blue-600"
+          >
             Explore Job
           </Link>
         </div>
