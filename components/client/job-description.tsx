@@ -13,8 +13,11 @@ const JobDescription: React.FC<JobDescriptionProps> = ({ job }) => {
     <div className="bg-white w-full p-2">
       <div dangerouslySetInnerHTML={{ __html: purify.sanitize(job.content) }} />
       <p className="mt-4 text-sm text-gray-500">
-        Posted by: {job.user.name || "Anonymous"} on{" "}
-        {new Date(job.createdAt).toLocaleDateString()}
+        Posted by:{" "}
+        <span className="text-blue-800 font-medium">
+          {job.user.name || "Anonymous"}
+        </span>{" "}
+        on {new Date(job.createdAt).toLocaleDateString()}
       </p>
     </div>
   );
