@@ -27,7 +27,9 @@ export default function Home() {
     <main className="w-full h-full flex justify-center items-center">
       <div className=" shadow-lg p-10">
         <div className="pb-4">
-          <div className="font-bold text-2xl text-blue-800 text-center">TE</div>
+          <div className="font-extrabold text-2xl text-blue-800 text-center">
+            TE
+          </div>
           <div className="text-center">Trainers India</div>
         </div>
 
