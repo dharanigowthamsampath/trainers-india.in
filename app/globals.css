@@ -75,3 +75,7 @@ a {
   color: #9ba3af !important;
 }
 /* Add any other custom styles you want */
+
+.preserve-whitespace {
+  white-space: pre-wrap;
+}

@@ -4,8 +4,8 @@ type Props = {};
 
 const ContentPage = (props: Props) => {
   return (
-    <div className="h-full w-full flex justify-center items-center">
-      <ComingSoon />
+    <div className="flex flex-grow w-full items-center justify-center">
+      Coming Soon!
     </div>
   );
 };

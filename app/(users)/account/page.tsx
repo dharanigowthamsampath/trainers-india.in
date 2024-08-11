@@ -4,11 +4,7 @@ import React from "react";
 type Props = {};
 
 const Account = (props: Props) => {
-  return (
-    <div className="h-full w-full flex justify-center items-center">
-      <ComingSoon />
-    </div>
-  );
+  return <div>Account Page is Coming Soon!</div>;
 };
 
 export default Account;

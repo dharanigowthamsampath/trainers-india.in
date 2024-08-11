@@ -20,6 +20,13 @@ export default function Home() {
             View Job
           </Link>
         </div>
+        <Link
+          href={"/job"}
+          className="px-10 py-2 bg-blue-600 rounded-lg text-white"
+        >
+          {" "}
+          Add Job
+        </Link>
       </div>
     </main>
   );

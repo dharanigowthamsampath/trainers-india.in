@@ -1,30 +1,11 @@
-import ComingSoon from "@/components/coming-soon";
-import Loader from "@/components/loader";
-import { checkUser } from "@/lib/checkUsers";
-import React, { Suspense } from "react";
+import React from "react";
 
 type Props = {};
 
-// const UserInfo = async () => {
-//   const user = await checkUser();
-//   return (
-//     <>
-//       <div>Emailid = {user?.emailId}</div>
-//       <div>ClerkUserId = {user?.clerkUserId}</div>
-//       <div>UserId = {user?.id}</div>
-//       <div>UserName = {user?.name}</div>
-//     </>
-//   );
-// };
-
 const LearnPage = (props: Props) => {
   return (
-    <div className="h-full w-full flex flex-col justify-center items-center">
-      {/* <Suspense fallback={<Loader size="medium" />}>
-        <UserInfo />
-      </Suspense> */}
-      <Loader size="medium" />
-      <ComingSoon />
+    <div className="flex w-full flex-grow items-center justify-center">
+      Coming Soon!
     </div>
   );
 };

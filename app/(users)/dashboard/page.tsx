@@ -1,26 +1,13 @@
-"use client";
-
-import React, { useState } from "react";
-import RichTextEditor from "@/components/client/rich-text-editor";
-// import "react-quill/dist/quill.snow.css";
+import React from "react";
 
 type Props = {};
 
-const Dashboard: React.FC<Props> = () => {
-  const [content, setContent] = useState("");
-
-  const handleEditorChange = (value: string) => {
-    setContent(value);
-  };
-
+const DashboardPage = (props: Props) => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <RichTextEditor value={content} onChange={handleEditorChange} />
-      <h2>Entered Content:</h2>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+    <div className="flex w-full flex-grow items-center justify-center">
+      Dashboard is coming soon!
     </div>
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

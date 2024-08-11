@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import NaviagtionMenu from "@/components/nav-menu";
 import { Poppins } from "next/font/google";
 
@@ -18,7 +19,7 @@ export default function RootLayout({
           <div className="w-[1280px]">
             <div className="flex flex-col w-full h-full">
               <NaviagtionMenu />
-
+              <SpeedInsights />
               {children}
             </div>
           </div>
