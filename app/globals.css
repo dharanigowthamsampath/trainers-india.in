@@ -1,3 +1,6 @@
+@import "react-quill/dist/quill.snow.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,3 +40,38 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Quill editor custom styles */
+.ql-editor {
+  font-size: 14px; /* Adjust this value as needed */
+}
+
+.ql-snow.ql-toolbar button svg {
+  width: 20px; /* Adjust this value as needed */
+  height: 20px; /* Adjust this value as needed */
+}
+
+.ql-snow .ql-picker {
+  font-size: 14px; /* Adjust this value as needed */
+}
+
+/* Optionally, you can style specific elements within the editor */
+.ql-editor h1 {
+  font-size: 2em;
+}
+
+.ql-editor h2 {
+  font-size: 1.5em;
+}
+
+.ql-container {
+  height: 50vh !important;
+  font-family: "Poppins", Helvetica, Arial, sans-serif !important;
+}
+
+.ql-editor.ql-blank::before {
+  font-style: normal !important;
+  font-size: 14px;
+  color: #9ba3af !important;
+}
+/* Add any other custom styles you want */
