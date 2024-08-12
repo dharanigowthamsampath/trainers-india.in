@@ -14,7 +14,7 @@ export default function Home() {
         <div className="pb-5 flex justify-center">
           <Link
             href={
-              "https://accounts.trainers-india.in/sign-in?redirect_url=https://trainers-india.in/dashboard"
+              "https://accounts.trainers-india.in/sign-in?redirect_url=https://trainers-india.in/job"
             }
             className="px-10 border py-2 border-blue-600"
           >
