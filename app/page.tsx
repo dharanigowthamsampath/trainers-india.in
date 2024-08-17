@@ -6,7 +6,7 @@ export default function Home() {
       <div className=" shadow-lg p-10">
         <div className="pb-4">
           <div className="font-extrabold text-2xl text-blue-800 text-center">
-            TE
+            TE <sup className="text-sm font-normal">beta</sup>
           </div>
           <div className="text-center">Trainers India</div>
         </div>
