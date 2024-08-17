@@ -1,0 +1,3 @@
+production: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
+staging: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
+development: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
