@@ -1,6 +1,7 @@
 "use client";
 import AddJobCard from "@/components/client/add-job-card";
 import ExploreMenuComponent from "@/components/client/explore-menu";
+import CreatedJobs from "@/components/client/explore-saved-menu";
 import SidebarMenu from "@/components/client/sidebar";
 import React, { useState } from "react";
 
@@ -9,7 +10,7 @@ type Props = {};
 const jobTabs = [
   { id: "explore", label: "Explore Jobs" },
   { id: "add", label: "Add Job" },
-  { id: "saved", label: "Saved Jobs" },
+  { id: "created", label: "Created Jobs" },
 ];
 
 const JobPage = (props: Props) => {
@@ -20,8 +21,8 @@ const JobPage = (props: Props) => {
         return <ExploreMenuComponent />;
       case "add":
         return <AddJobCard />;
-      case "saved":
-        return <div>Saved Jobs Menu</div>;
+      case "created":
+        return <CreatedJobs />;
       default:
         return null;
     }

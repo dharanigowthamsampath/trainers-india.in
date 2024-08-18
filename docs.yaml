@@ -1,3 +1,14 @@
-production: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
-staging: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
-development: { domain: "", clerk_api: "", clerk_secret: "", db_url: "" }
+production:
+  {
+    domain: "trainers-india.in",
+    clerk_api: "pk_live_Y2xlcmsudHJhaW5lcnMtaW5kaWEuaW4k",
+    clerk_secret: "sk_live_bQjqd38N5RK3vVOyTYmyhaW3xwNk4cbS99CAUF2e8q",
+    db_url: "postgresql://trainers_india_owner:riVMXju9fv2x@ep-calm-union-a1ebw19u-pooler.ap-southeast-1.aws.neon.tech/trainers_india?sslmode=require",
+  }
+development:
+  {
+    domain: "preview.trainers-india.in",
+    clerk_api: "pk_test_c29jaWFsLWNsYW0tMzMuY2xlcmsuYWNjb3VudHMuZGV2JA",
+    clerk_secret: "sk_test_nbhZsphflqkMRDu2AUYyRQAHeoB2UYVzzTe2KT0sKH",
+    db_url: "postgresql://trainers_india_owner:riVMXju9fv2x@ep-rough-dew-a12kr0f6.ap-southeast-1.aws.neon.tech/trainers_india?sslmode=require",
+  }
