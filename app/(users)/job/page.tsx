@@ -9,7 +9,7 @@ type Props = {};
 const jobTabs = [
   { id: "explore", label: "Explore Jobs" },
   { id: "add", label: "Add Job" },
-  { id: "saved", label: "Saved Jobs" },
+  // { id: "saved", label: "Saved Jobs" },
 ];
 
 const JobPage = (props: Props) => {
