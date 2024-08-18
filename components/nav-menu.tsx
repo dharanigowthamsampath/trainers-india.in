@@ -54,7 +54,7 @@ const NavigationMenu = () => {
           </Link>
           <div>
             <div className="w-full flex justify-center space-x-0.5">
-              <Link
+              {/* <Link
                 href="/dashboard"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
                   isActive("/dashboard")
@@ -63,7 +63,7 @@ const NavigationMenu = () => {
                 }`}
               >
                 Dashboard
-              </Link>
+              </Link> */}
               <Link
                 href="/job"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
@@ -74,7 +74,7 @@ const NavigationMenu = () => {
               >
                 Jobs
               </Link>
-              <Link
+              {/* <Link
                 href="/learn"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
                   isActive("/learn")
@@ -83,8 +83,8 @@ const NavigationMenu = () => {
                 }`}
               >
                 Learn
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/content"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
                   isActive("/content")
@@ -93,7 +93,7 @@ const NavigationMenu = () => {
                 }`}
               >
                 Content
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ const NavigationMenu = () => {
         </div>
         {isMenuOpen && (
           <div className="flex flex-col">
-            <Link
+            {/* <Link
               href="/dashboard"
               className={`px-4 py-2 cursor-pointer ${
                 isActive("/dashboard")
@@ -182,7 +182,7 @@ const NavigationMenu = () => {
               }`}
             >
               Dashboard
-            </Link>
+            </Link> */}
             <Link
               href="/job"
               className={`px-4 py-2 cursor-pointer ${
@@ -193,7 +193,7 @@ const NavigationMenu = () => {
             >
               Jobs
             </Link>
-            <Link
+            {/* <Link
               href="/learn"
               className={`px-4 py-2 cursor-pointer ${
                 isActive("/learn")
@@ -202,8 +202,8 @@ const NavigationMenu = () => {
               }`}
             >
               Learn
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href="/content"
               className={`px-4 py-2 cursor-pointer ${
                 isActive("/content")
@@ -212,7 +212,7 @@ const NavigationMenu = () => {
               }`}
             >
               Content
-            </Link>
+            </Link> */}
             <div
               onClick={signOutFunction}
               className="px-4 py-2 mb-2 cursor-pointer text-red-500 hover:bg-red-500 hover:text-white"
