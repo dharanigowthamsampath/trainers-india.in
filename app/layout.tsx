@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     description:
       "Connect with top trainers or find your next project on Trainers India. Post training requirements, apply for opportunities, and grow your career or business.",
     type: "website",
-    url: "https://www.trainers-india.in", // Replace with your actual URL
+    url: "https://www.trainers-india.in",
     images: [
       {
-        url: "https://www.trainers-india.in/OG_image.jpg", // Replace with your actual image URL
+        url: "https://www.trainers-india.in/OG_image.jpg",
         width: 1200,
         height: 630,
         alt: "Trainers India Platform",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Trainers India | Connecting Expertise with Opportunity",
     description:
       "Find skilled trainers or exciting projects on Trainers India. Your one-stop platform for training success in India.",
-    images: ["https://www.trainers-india.in/OG_image.jpg"], // Replace with your actual image URL
+    images: ["https://www.trainers-india.in/OG_image.jpg"],
   },
 };
 
