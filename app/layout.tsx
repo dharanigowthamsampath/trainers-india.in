@@ -9,16 +9,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Trainers India | Connect with Skilled Freelancers",
+  title: "Trainers India | Connect with Skilled Trainers",
   description:
-    "Trainers India is a premier platform connecting businesses with skilled freelancers across India. Post your job requirements or find your next freelance opportunity. Join our community of professionals today!",
+    "Trainers India is a premier platform connecting businesses with skilled trainers across India. Post your training requirements or find your next training opportunity. Join our community of professionals today!",
   keywords:
-    "freelance, India, job platform, hire freelancers, find jobs, trainers, skilled professionals",
+    "trainers, India, job platform, hire trainers, find training jobs, technical trainers, skill development",
   authors: [{ name: "Trainers India Team" }],
   openGraph: {
-    title: "Trainers India - Your Gateway to Freelance Opportunities",
+    title: "Trainers India - Your Gateway to Training Opportunities",
     description:
-      "Connect with top freelancers or find your next project on Trainers India. Post jobs, apply for opportunities, and grow your career or business.",
+      "Connect with top trainers or find your next project on Trainers India. Post training requirements, apply for opportunities, and grow your career or business.",
     type: "website",
     url: "https://www.trainers-india.in", // Replace with your actual URL
     images: [
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trainers India | Connecting Talent with Opportunity",
+    title: "Trainers India | Connecting Expertise with Opportunity",
     description:
-      "Find skilled freelancers or exciting projects on Trainers India. Your one-stop platform for freelance success in India.",
+      "Find skilled trainers or exciting projects on Trainers India. Your one-stop platform for training success in India.",
     images: ["https://www.trainers-india.in/OG_image.jpg"], // Replace with your actual image URL
   },
 };
