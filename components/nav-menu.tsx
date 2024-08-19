@@ -39,7 +39,15 @@ const NavigationMenu = () => {
     }
   };
 
-  const isActive = (path: string) => pathname === path;
+  // const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => {
+    if (path === "/job") {
+      // Check if the pathname starts with '/job'
+      return pathname.startsWith("/job");
+    }
+    // For other paths, keep the exact match
+    return pathname === path;
+  };
 
   return (
     <div className="w-full bg-white">
@@ -54,7 +62,7 @@ const NavigationMenu = () => {
           </Link>
           <div>
             <div className="w-full flex justify-center space-x-0.5">
-              {/* <Link
+              <Link
                 href="/dashboard"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
                   isActive("/dashboard")
@@ -63,7 +71,7 @@ const NavigationMenu = () => {
                 }`}
               >
                 Dashboard
-              </Link> */}
+              </Link>
               <Link
                 href="/job"
                 className={`flex justify-center items-center px-4 py-2 cursor-pointer ${
@@ -173,7 +181,7 @@ const NavigationMenu = () => {
         </div>
         {isMenuOpen && (
           <div className="flex flex-col">
-            {/* <Link
+            <Link
               href="/dashboard"
               className={`px-4 py-2 cursor-pointer ${
                 isActive("/dashboard")
@@ -182,7 +190,7 @@ const NavigationMenu = () => {
               }`}
             >
               Dashboard
-            </Link> */}
+            </Link>
             <Link
               href="/job"
               className={`px-4 py-2 cursor-pointer ${

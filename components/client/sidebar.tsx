@@ -1,24 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 type Tab = {
   id: string;
   label: string;
+  href: string;
 };
 
 type Props = {
   tabs: Tab[];
   activeTab: string;
-  setActiveTab: (tab: string) => void;
   className?: string;
 };
 
-const SidebarMenu: React.FC<Props> = ({
-  tabs,
-  activeTab,
-  setActiveTab,
-  className = "",
-}) => {
+const SidebarMenu: React.FC<Props> = ({ tabs, activeTab, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -33,8 +29,7 @@ const SidebarMenu: React.FC<Props> = ({
     };
   }, []);
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
+  const handleTabClick = () => {
     if (isMobile) {
       setIsOpen(false);
     }
@@ -63,17 +58,18 @@ const SidebarMenu: React.FC<Props> = ({
           {isOpen && (
             <div className="absolute top-full left-0 w-full bg-white shadow-md z-10">
               {tabs.map((tab) => (
-                <div
+                <Link
                   key={tab.id}
-                  className={`p-2 cursor-pointer ${
+                  href={tab.href}
+                  className={`block p-2 cursor-pointer ${
                     activeTab === tab.id
                       ? "bg-blue-800 text-white"
                       : "hover:bg-blue-800 hover:text-white"
                   }`}
-                  onClick={() => handleTabClick(tab.id)}
+                  onClick={handleTabClick}
                 >
                   {tab.label}
-                </div>
+                </Link>
               ))}
             </div>
           )}
@@ -81,17 +77,18 @@ const SidebarMenu: React.FC<Props> = ({
       ) : (
         <div className={`flex w-96 ${className}`}>
           {tabs.map((tab) => (
-            <div
+            <Link
               key={tab.id}
+              href={tab.href}
               className={`p-2 cursor-pointer flex-grow text-center ${
                 activeTab === tab.id
                   ? "bg-blue-800 text-white"
                   : "hover:bg-blue-800 hover:text-white"
               }`}
-              onClick={() => handleTabClick(tab.id)}
+              onClick={handleTabClick}
             >
               {tab.label}
-            </div>
+            </Link>
           ))}
         </div>
       )}
