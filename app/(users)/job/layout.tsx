@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const jobTabs = [
   { id: "explore", label: "Updates", href: "/job/explore" },
-  { id: "add", label: "Add Job", href: "/job/add-job" },
+  { id: "add", label: "Add Post", href: "/job/add-job" },
 ];
 
 export default function JobLayout({ children }: { children: React.ReactNode }) {
