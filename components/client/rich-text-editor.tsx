@@ -31,7 +31,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
       value={value}
       onChange={onChange}
       modules={modules}
-      placeholder="Enter your Job Description here..."
+      placeholder="Enter your remaining details here..."
     />
   );
 };

@@ -13,6 +13,7 @@ export type Job = {
   content: string;
   createdAt: Date;
   userId: string;
+  isHiring: boolean;
   user: {
     name: string | null;
   };

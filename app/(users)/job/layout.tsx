@@ -3,7 +3,7 @@ import SidebarMenu from "@/components/client/sidebar";
 import { usePathname } from "next/navigation";
 
 const jobTabs = [
-  { id: "explore", label: "Explore Jobs", href: "/job/explore" },
+  { id: "explore", label: "Updates", href: "/job/explore" },
   { id: "add", label: "Add Job", href: "/job/add-job" },
 ];
 

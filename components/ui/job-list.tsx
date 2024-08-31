@@ -49,8 +49,9 @@ const JobList: React.FC<JobListProps> = ({
             <div onClick={() => onSelectJob(job)}>
               <JobListCard
                 username={job.user.name || "Anonymous"}
-                title={`${job.title.substring(0, 40)}`}
+                title={`${job.title.substring(0, 35)}`}
                 isSelected={selectedJob?.id === job.id}
+                isHiring={job.isHiring} // Add this line
               />
             </div>
             {isMobile && (

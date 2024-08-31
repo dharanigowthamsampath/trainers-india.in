@@ -3,8 +3,15 @@
 import { AddJobPost } from "@/server/AddJobPost";
 import React, { useState, useTransition, useEffect, useRef } from "react";
 import RichTextEditor from "@/components/client/rich-text-editor";
+import ToggleButton from "../common/ToggleButton";
 
 const AddJobCard = () => {
+  const [isHiring, setIsHiring] = useState<"hiring" | "available">("hiring");
+
+  const handleToggle = (value: "hiring" | "available") => {
+    setIsHiring(value);
+  };
+
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState<{
@@ -29,6 +36,7 @@ const AddJobCard = () => {
     startTransition(async () => {
       const formData = new FormData(e.currentTarget);
       formData.append("content", content);
+      formData.append("isHiring", isHiring);
 
       const response = await AddJobPost(formData);
       if (response.success) {
@@ -61,20 +69,26 @@ const AddJobCard = () => {
         className="space-y-2 w-full px-4"
       >
         <div className="w-full flex justify-between items-center">
-          <span className="text-lg font-medium">Add a Job Requirement</span>
-          <div className="space-x-2">
-            <button
-              type="submit"
-              className="py-2 px-4 bg-blue-700 text-white"
-              disabled={isPending}
-            >
-              {isPending ? "Posting..." : "Post Job"}
-            </button>
-          </div>
+          <ToggleButton
+            value={isHiring}
+            selectedValue={isHiring}
+            onChange={handleToggle}
+          />
+          <button
+            type="submit"
+            className="py-2 px-4 bg-blue-700 text-white"
+            disabled={isPending}
+          >
+            {isPending ? "Posting..." : "Post Job"}
+          </button>
         </div>
         <input
           name="title"
-          placeholder="Enter the Job title Here..."
+          placeholder={
+            isHiring === "hiring"
+              ? "Enter the Job title here..."
+              : "Enter your Name here..."
+          }
           className="border text-sm px-4 py-2 w-full border-[#CCCCCC]"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
