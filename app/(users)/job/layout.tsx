@@ -3,7 +3,7 @@ import SidebarMenu from "@/components/client/sidebar";
 import { usePathname } from "next/navigation";
 
 const jobTabs = [
-  { id: "explore", label: "Updates", href: "/job/explore" },
+  { id: "updates", label: "Updates", href: "/job/updates" },
   { id: "add", label: "Add Post", href: "/job/add-job" },
 ];
 
@@ -15,8 +15,8 @@ export default function JobLayout({ children }: { children: React.ReactNode }) {
     jobTabs.find(
       (tab) =>
         pathname === tab.href ||
-        (tab.href === "/job/explore" && pathname === "/job")
-    )?.id || "explore";
+        (tab.href === "/job/updates" && pathname === "/job")
+    )?.id || "updates";
 
   return (
     <div className="w-full h-[calc(100vh-50px)] flex flex-col mt-1">

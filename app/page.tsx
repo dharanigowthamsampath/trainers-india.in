@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import HomePageMenu from "@/components/homepage/menu";
+
 export default function Home() {
   return (
     <main className="w-full h-full flex justify-center items-center">
@@ -30,3 +32,11 @@ export default function Home() {
     </main>
   );
 }
+
+// export default function Home() {
+//   return (
+//     <main className="w-full h-full flex justify-center bg-white">
+//       <HomePageMenu />
+//     </main>
+//   );
+// }

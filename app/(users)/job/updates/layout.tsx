@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description:
       "Browse through verified training job listings across India. Find opportunities in technical training, Java, aptitude, SAP, and various other domains. Secure and efficient job searching for trainers.",
     type: "website",
-    url: "https://www.trainers-india.in/job/explore",
+    url: "https://www.trainers-india.in/job/updates",
     siteName: "Trainers India",
     images: [
       {
