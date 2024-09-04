@@ -1,0 +1,21 @@
+features:
+  {
+    1: Notifications,
+    2: Location based job,
+    3: Domain based job,
+    4: Legal support,
+    5: Report trainer/company,
+  }
+premium:
+  {
+    1: Project Management,
+    2: Test Platform,
+    3: Question Bank,
+    4: Courses,
+    5: LMS,
+    6: Internships,
+    7: Projects,
+    8: Workshops,
+    9: Extended Legal Support,
+  }
+enterprise: { 1: Lab, 2: Startup, 3: Third party hiring }
