@@ -1,10 +1,75 @@
-features:
-  {
-    1: Notifications,
-    2: Location based job,
-    3: Domain based job,
-    4: Legal support,
-    5: Report trainer/company,
+features: {
+    # Need to build the profile page for the users,
+    # Make type as fixed so we can remove the Hiring and Open to work from job posting
+    # Profile:
+    #   {
+    #     type: [vendor, trainer],
+    # name: Deepika,
+    # dob: 01/2003,
+    # domain: [python, java, c, DSA, c++, sql],
+    # language: [telugu, tamil, english],
+    # address:
+    #   {
+    #     line1: RamNagar,
+    #     city: Anatapur,
+    #     state: Andra pradesh,
+    #     country: India,
+    #   },
+    #   },
+
+    Profile:
+      {
+        Vendor:
+          {
+            type: Vendor,
+            name: Deepika,
+            dob: 01/2003,
+            domain: [python, java, c, DSA, c++, sql],
+            language: [telugu, tamil, english],
+            address:
+              {
+                line1: RamNagar,
+                city: Anatapur,
+                state: Andra pradesh,
+                country: India,
+              },
+          },
+
+        Trainer:
+          {
+            type: Trainer,
+            name: Deepika,
+            dob: 01/2003,
+            domain: [python, java, c, DSA, c++, sql],
+            language: [telugu, tamil, english],
+            address:
+              {
+                line1: RamNagar,
+                city: Anatapur,
+                state: Andra pradesh,
+                country: India,
+              },
+          },
+      },
+    # so we can able to send the notification to the specific users for the specific jobs
+    Notifications:
+      {
+        email-notification:
+          {
+            gmail-api:
+              {
+                api-id: application-id,
+                api-secret: application-secret,
+                api-callback: application-callback,
+                app-password: app-password,
+              },
+          },
+        push-notification: { firebase-api: [] },
+      },
+    Location based job: {},
+    Domain based job: {},
+    Legal support: {},
+    Report trainer/company: {},
   }
 premium:
   {
