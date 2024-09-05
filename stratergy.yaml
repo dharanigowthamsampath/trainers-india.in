@@ -1,34 +1,25 @@
+pending:
+  {
+    1: upload pdf file to the server,
+    2: profile page,
+    3: onboarding page,
+    4: email notification,
+  }
 features: {
     # Need to build the profile page for the users,
     # Make type as fixed so we can remove the Hiring and Open to work from job posting
-    # Profile:
-    #   {
-    #     type: [vendor, trainer],
-    # name: Deepika,
-    # dob: 01/2003,
-    # domain: [python, java, c, DSA, c++, sql],
-    # language: [telugu, tamil, english],
-    # address:
-    #   {
-    #     line1: RamNagar,
-    #     city: Anatapur,
-    #     state: Andra pradesh,
-    #     country: India,
-    #   },
-    #   },
-
     Profile:
       {
         Vendor:
           {
             type: Vendor,
-            name: Deepika,
+            name: Deepika Dharani,
             dob: 01/2003,
             domain: [python, java, c, DSA, c++, sql],
             language: [telugu, tamil, english],
             address:
               {
-                line1: RamNagar,
+                street: RamNagar,
                 city: Anatapur,
                 state: Andra pradesh,
                 country: India,
@@ -37,20 +28,23 @@ features: {
 
         Trainer:
           {
+            notification: boolean,
             type: Trainer,
-            name: Deepika,
-            dob: 01/2003,
+            name: Dharani,
+            dob: 05/1998,
             domain: [python, java, c, DSA, c++, sql],
-            language: [telugu, tamil, english],
+            language: [tamil, telugu, english],
             address:
               {
-                line1: RamNagar,
-                city: Anatapur,
-                state: Andra pradesh,
+                street: RamNagar,
+                city: Erode,
+                state: Tamil Nadu,
                 country: India,
               },
+            resume: pdf-file,
           },
       },
+
     # so we can able to send the notification to the specific users for the specific jobs
     Notifications:
       {
