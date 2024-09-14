@@ -1,3 +1,15 @@
+# These are the things need to learn and implement in the application
+# Later move from third party to our own server
+Learn and do:
+  {
+    auto-post: auto post the requirement when shared in the group,
+    file-upload: uploadthing & AWS S3 Storage,
+    file-cache: Stratergy/Mechanism,
+    cdn-integration: cloudflare,
+    mail-integration: gmail-api & gmail-app,
+    db-indexing: prisma-db index for query based on tags,
+  }
+
 pending:
   {
     1: upload pdf file to the server,
@@ -13,15 +25,15 @@ features: {
         Vendor:
           {
             type: Vendor,
-            name: Deepika Dharani,
+            name: Keerthana Dharani,
             dob: 01/2003,
             domain: [python, java, c, DSA, c++, sql],
             language: [telugu, tamil, english],
             address:
               {
-                street: RamNagar,
-                city: Anatapur,
-                state: Andra pradesh,
+                street: Andalur Gate,
+                city: Rasipuram,
+                state: Tamil Nadu,
                 country: India,
               },
           },
